@@ -692,46 +692,18 @@
             <h2>Let's Build <br><span>Something Great.</span></h2>
             <p>Ready to scale? Fill out the form and our strategists will contact you within 24 hours.</p>
             <br>
-            <p><i class="fas fa-phone" style="color:var(--primary)"></i> +91 977380282</p>
+            <p><i class="fas fa-phone" style="color:var(--primary)"></i> +91 97738 0282</p>
             <p><i class="fas fa-envelope" style="color:var(--primary)"></i> hello@algorithmbox.com</p>
         </div>
         <div class="contact-form">
-    <!-- Action me apna Formspree link lagana mat bhulna -->
-    <form action="https://formspree.io/f/mvgeykzb" method="POST">
-        
-        <!-- Name Field -->
-        <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required>
+            <form onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been sent.');">
+                <div class="form-group"><input type="text" placeholder="Your Name" required aria-label="Your Name"></div>
+                <div class="form-group"><input type="email" placeholder="Email Address" required aria-label="Email Address"></div>
+                <div class="form-group"><select aria-label="Select Service"><option>Interested Service?</option><option>Web Development</option><option>SEO Services</option></select></div>
+                <div class="form-group"><textarea rows="4" placeholder="Tell us about your project..." aria-label="Project Details"></textarea></div>
+                <button type="submit" class="btn-main" style="width:100%">SEND MESSAGE</button>
+            </form>
         </div>
-
-        <!-- Phone Number Field (NEW ADDED) -->
-        <div class="form-group">
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-        </div>
-
-        <!-- Email Field -->
-        <div class="form-group">
-            <input type="email" name="email" placeholder="Email Address" required>
-        </div>
-
-        <!-- Service Selection -->
-        <div class="form-group">
-            <select name="service" required>
-                <option value="" disabled selected>Interested Service?</option>
-                <option value="Web Development">Web Development</option>
-                <option value="SEO Services">SEO Services</option>
-                <option value="Performance Marketing">Performance Marketing</option>
-            </select>
-        </div>
-
-        <!-- Message Field -->
-        <div class="form-group">
-            <textarea name="message" rows="4" placeholder="Tell us about your project..."></textarea>
-        </div>
-
-        <button type="submit" class="btn-main" style="width:100%">SEND MESSAGE</button>
-    </form>
-</div>
     </section>
 
     <footer>
@@ -739,12 +711,24 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h2 class="footer-logo">Algorithm<span>Box</span>.</h2>
-                    <p>"Looking for the best Digital Marketing Agency in New Delhi? We are a full-service creative agency dedicated to elevating brands. By blending data-driven marketing strategies with exceptional creative output, we generate rich digital experiences that boost ROI. We live by our motto – 'We create super-rich experiences online!'"</p>
+                    <p>We are a premium digital growth agency based in New Delhi, helping brands scale through data-driven strategies.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
+    <a href="https://www.facebook.com/profile.php?id=61584776144028" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.instagram.com/algorithmboxx/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="#" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://x.com/Algorithmboxx" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+</div>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
@@ -755,20 +739,12 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <!-- FULL FOOTER SERVICES LIST -->
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="javascript:void(0)" onclick="openModal('strategy')">Digital Strategy</a></li>
-                        <li><a href="javascript:void(0)" onclick="openModal('creative')">Creative Graphics</a></li>
-                        <li><a href="javascript:void(0)" onclick="openModal('social')">Social Media</a></li>
-                        <li><a href="javascript:void(0)" onclick="openModal('video')">Video Marketing</a></li>
-                        <li><a href="javascript:void(0)" onclick="openModal('web')">Web Development</a></li>
                         <li><a href="javascript:void(0)" onclick="openModal('seo')">SEO Services</a></li>
-                        <li><a href="javascript:void(0)" onclick="openModal('email')">Email Marketing</a></li>
-                        <li><a href="javascript:void(0)" onclick="openModal('analytics')">Web Analytics</a></li>
-                        <li><a href="javascript:void(0)" onclick="openModal('media')">Media Buying</a></li>
-                        <li><a href="javascript:void(0)" onclick="openModal('shopify')">Shopify Experts</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('social')">Social Media</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('web')">Web Development</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -781,19 +757,12 @@
                 </div>
             </div>
         </div>
-        <div class="social-links">
-    <a href="https://www.instagram.com/algorithmboxx/" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="https://www.facebook.com/apna_page_link" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-
-    <a href="https://x.com/Algorithmboxx" target="_blank" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-    </a>
-</div>
+        <div class="footer-bottom">
+            <div class="copyright">© 2025 AlgorithmBox. All Rights Reserved.</div>
+            <div class="legal-links">
+                <a href="javascript:void(0)" class="legal-link" onclick="openLegalModal('privacy')">Privacy Policy</a>
+                <a href="javascript:void(0)" class="legal-link" onclick="openLegalModal('terms')">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
