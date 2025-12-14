@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgorithmBox | Premium Digital Growth Agency</title>
+    
+    <!-- --- SEO META TAGS --- -->
+    <meta name="description" content="AlgorithmBox is a premium digital growth agency in Delhi. We offer SEO, Performance Marketing, and Web Development to scale your business.">
+    <meta name="keywords" content="Digital Marketing Agency, SEO Services Delhi, Meta Ads Expert, Web Development, AlgorithmBox">
+    <meta name="author" content="AlgorithmBox">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.algorithmbox.com/">
+    <meta name="theme-color" content="#FFD401">
+
+    <!-- --- OPEN GRAPH (Social Sharing) --- -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.algorithmbox.com/">
+    <meta property="og:title" content="AlgorithmBox | Premium Digital Growth Agency">
+    <meta property="og:description" content="We blend creative algorithms with performance marketing (SEO, Meta Ads) to deliver super-rich experiences.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+
+    <!-- --- FONTS & ICONS --- -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- --- SCHEMA MARKUP --- -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DigitalMarketingAgency",
+      "name": "AlgorithmBox",
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+      "url": "https://www.algorithmbox.com",
+      "telephone": "+91977380282",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Connaught Place",
+        "addressLocality": "New Delhi",
+        "postalCode": "110001",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --primary: #FFD401; /* Yellow */
+            --dark: #0a0a0a; 
+            --dark-card: #141414;
+            --light: #F9F9F9;
+            --white: #ffffff;
+            --gray: #888888;
+            --border-color: rgba(0,0,0,0.05);
+        }
+
+        /* --- GLOBAL & RESET --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--white); 
+            color: var(--dark); 
+            line-height: 1.7;
+            overflow-x: hidden;
+            cursor: none; 
+        }
+
+        ::selection { background: var(--primary); color: var(--dark); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--white); }
+        ::-webkit-scrollbar-thumb { background: var(--dark); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+        body.modal-open { overflow: hidden; padding-right: 8px; }
+
+        /* ELEMENTS CURSOR RESET */
+        a, button, input, select, textarea, .read-more, .client-logo, .modal-close, .blog-btn, .legal-link, .service-card, .blog-card, .work-card, .btn-dark-outline {
+            cursor: none !important;
+        }
+
+        /* --- CUSTOM CURSOR --- */
+        .cursor {
+            width: 15px; height: 15px; background: var(--primary); border-radius: 50%;
+            position: fixed; pointer-events: none; z-index: 99999;
+            transform: translate(-50%, -50%); transition: transform 0.1s, width 0.3s, height 0.3s;
+            mix-blend-mode: difference; display: none;
+        }
+        @media (hover: hover) and (pointer: fine) { .cursor { display: block; } }
+        .cursor.hovered { 
+            width: 60px; height: 60px; background: rgba(255, 212, 1, 0.1); 
+            border: 1px solid var(--primary); backdrop-filter: blur(2px);
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4, h5 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: -0.5px; }
+        a { text-decoration: none; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* SCROLL PROGRESS */
+        .scroll-progress {
+            position: fixed; top: 0; left: 0; height: 3px; background: var(--primary); width: 0%; z-index: 1002;
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            padding: 20px 5%; position: fixed; width: 100%; top: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: 0.4s ease;
+        }
+        header.sticky { padding: 15px 5%; background: rgba(0,0,0,0.95); border-bottom: 2px solid var(--primary); }
+
+        .logo { font-size: 24px; font-weight: 900; color: var(--white); display: flex; align-items: center; letter-spacing: 1px; }
+        .logo i { color: var(--primary); margin-right: 10px; }
+        .logo span { color: var(--primary); }
+
+        nav ul { display: flex; gap: 35px; }
+        nav ul li a { color: rgba(255,255,255,0.8); font-size: 12px; font-weight: 600; position: relative; text-transform: uppercase; letter-spacing: 1px; }
+        nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--primary); transition: 0.3s; }
+        nav ul li a:hover { color: var(--white); }
+        nav ul li a:hover::after { width: 100%; }
+        .mobile-btn { display: none; color: var(--primary); font-size: 24px; cursor: pointer !important; }
+
+        /* --- HERO --- */
+        .hero {
+            height: 100vh; background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000000 100%);
+            color: var(--white); display: flex; align-items: center; padding: 0 5%;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,212,1,0.03) 0%, transparent 60%);
+            animation: pulseGlow 10s infinite alternate; pointer-events: none;
+        }
+        @keyframes pulseGlow { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.2); opacity: 1; } }
+
+        .hero-content { z-index: 2; max-width: 900px; }
+        .hero p.subtitle { color: var(--primary); font-weight: 700; letter-spacing: 3px; margin-bottom: 15px; font-size: 14px; }
+        .hero h1 { font-size: 75px; line-height: 1.1; margin-bottom: 25px; }
+        .hero h1 span { color: var(--primary); position: relative; }
+        .hero-desc { font-size: 18px; color: #ccc; max-width: 600px; margin-bottom: 40px; font-weight: 300; }
+        
+        .typewriter { border-right: 3px solid var(--primary); animation: blink 0.75s step-end infinite; }
+        @keyframes blink { 50% { border-color: transparent; } }
+
+        .btn-main {
+            padding: 18px 40px; background: var(--primary); color: var(--dark);
+            font-weight: 800; font-size: 14px; letter-spacing: 1px;
+            border: none; display: inline-block; margin-right: 15px; position: relative; overflow: hidden; z-index: 1;
+            cursor: pointer; box-shadow: 0 10px 30px rgba(255, 212, 1, 0.2); transition: 0.4s;
+        }
+        .btn-main::before {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: #fff; transition: 0.4s; z-index: -1; transform: skewX(-20deg);
+        }
+        .btn-main:hover::before { left: 0; transform: skewX(0); }
+        .btn-main:hover { box-shadow: 0 10px 40px rgba(255, 212, 1, 0.4); transform: translateY(-3px); }
+
+        /* --- STATS --- */
+        .stats-section {
+            background: var(--primary); color: var(--dark); padding: 60px 5%;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center;
+        }
+        .stat-box h3 { font-size: 50px; margin-bottom: 0px; font-weight: 800; line-height: 1; }
+        .stat-box p { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
+
+        /* --- ABOUT --- */
+        .about-section { padding: 120px 5%; background-color: var(--white); }
+        .about-intro-grid { 
+            display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; margin-bottom: 80px;
+        }
+        .about-text h4 { color: var(--primary); letter-spacing: 3px; margin-bottom: 15px; font-size: 13px; font-weight: 800; }
+        .about-text h2 { font-size: 50px; line-height: 1.1; margin-bottom: 30px; color: var(--dark); }
+        .about-text p { color: #555; margin-bottom: 25px; font-size: 17px; font-weight: 300; }
+        .about-img img { width: 100%; border-radius: 2px; box-shadow: 30px 30px 0px var(--dark); transition: 0.5s; }
+        .about-img:hover img { transform: translate(10px, 10px); box-shadow: 20px 20px 0px var(--primary); }
+
+        /* --- SERVICES --- */
+        .services { padding: 120px 5%; background: #f4f4f4; position: relative; }
+        .section-title { text-align: center; margin-bottom: 80px; }
+        .section-title h2 { font-size: 45px; color: var(--dark); position: relative; display: inline-block; z-index: 1; }
+        .section-title h2::after { content: ''; width: 80px; height: 6px; background: var(--primary); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
+        .section-title p { color: #666; margin-top: 20px; font-size: 18px; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+        
+        .service-card {
+            background: var(--white); padding: 50px 40px; border-radius: 0; 
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+            border: 1px solid rgba(0,0,0,0.05); position: relative; overflow: hidden;
+            display: flex; flex-direction: column; height: 100%;
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); border-color: transparent; }
+        .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 4px; background: var(--primary); transition: 0.4s; }
+        .service-card:hover::after { width: 100%; }
+        
+        .service-icon { 
+            font-size: 26px; color: var(--primary); margin-bottom: 30px; 
+            background: var(--dark); width: 65px; height: 65px; 
+            display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: 0.4s;
+        }
+        .service-card:hover .service-icon { transform: rotateY(180deg); }
+        .service-card h3 { font-size: 22px; margin-bottom: 15px; line-height: 1.3; font-weight: 700; }
+        .service-card p { font-size: 15px; color: #666; margin-bottom: 25px; flex-grow: 1; font-weight: 400; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .read-more { font-size: 12px; font-weight: 800; color: var(--dark); display: flex; align-items: center; gap: 8px; margin-top: auto; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; }
+        .read-more:hover { color: #555; gap: 12px; }
+        .read-more:hover i { color: var(--primary); }
+
+        /* --- WORK / PORTFOLIO SECTION --- */
+        .work-section { padding: 120px 5%; background: var(--white); }
+        .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+
+        .work-card {
+            position: relative; overflow: hidden; cursor: pointer; border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.4s;
+            background: #fff;
+        }
+        .work-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.15); }
+        .work-img { width: 100%; height: 300px; object-fit: cover; transition: 0.6s ease; filter: brightness(0.9); }
+        .work-card:hover .work-img { transform: scale(1.05); filter: brightness(1); }
+        .work-overlay {
+            position: absolute; bottom: 0; left: 0; width: 100%; 
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 30px; z-index: 2;
+        }
+        .work-cat { color: var(--primary); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: block; }
+        .work-title { color: #fff; font-size: 22px; line-height: 1.3; margin-bottom: 0; }
+        .work-btn { 
+            position: absolute; top: 20px; right: 20px; width: 50px; height: 50px;
+            background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: var(--dark); opacity: 0; transform: scale(0); transition: 0.4s;
+        }
+        .work-card:hover .work-btn { opacity: 1; transform: scale(1); }
+
+        /* --- BLOG SECTION --- */
+        .blog-section { padding: 120px 5%; background: #f9f9f9; } 
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .blog-card {
+            background: var(--white); border-radius: 0; overflow: hidden; 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.03); transition: 0.4s; border: 1px solid #eee;
+            display: flex; flex-direction: column;
+        }
+        .blog-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+        .blog-img-box { position: relative; overflow: hidden; height: 240px; flex-shrink: 0; }
+        .blog-img-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
+        .blog-card:hover .blog-img-box img { transform: scale(1.1); }
+        .category-tag { 
+            position: absolute; top: 20px; left: 20px; 
+            background: var(--primary); color: var(--dark); padding: 6px 14px; 
+            font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; 
+        }
+        .blog-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-meta { font-size: 12px; color: #999; margin-bottom: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .blog-content h3 { font-size: 22px; margin-bottom: 12px; line-height: 1.4; }
+        .blog-content p { font-size: 15px; color: #666; margin-bottom: 25px; flex-grow: 1; }
+        .blog-btn { 
+            color: var(--dark); font-weight: 800; font-size: 12px; 
+            text-transform: uppercase; letter-spacing: 1px; 
+            border-bottom: 2px solid var(--primary); width: fit-content; cursor: pointer; padding-bottom: 3px;
+            transition: 0.3s;
+        }
+        .blog-btn:hover { color: var(--primary); border-color: var(--dark); }
+
+        /* --- POPUP MODAL --- */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            z-index: 10000; display: none; justify-content: center; align-items: center;
+            opacity: 0; transition: opacity 0.4s ease;
+        }
+        .modal-overlay.active { display: flex; opacity: 1; }
+        .modal-content {
+            background: #fff; width: 90%; max-width: 750px; padding: 50px;
+            border-radius: 4px; position: relative; border-top: 6px solid var(--primary);
+            box-shadow: 0 30px 100px rgba(0,0,0,0.3);
+            transform: translateY(100px) scale(0.95); transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            max-height: 90vh; overflow-y: auto;
+        }
+        .modal-overlay.active .modal-content { transform: translateY(0) scale(1); }
+        .modal-close { position: absolute; top: 20px; right: 25px; font-size: 30px; color: #ccc; cursor: pointer; transition: 0.3s; }
+        .modal-close:hover { color: var(--dark); transform: rotate(90deg); }
+        .modal-header-icon {
+            font-size: 32px; color: var(--primary); margin-bottom: 25px; 
+            background: var(--dark); width: 70px; height: 70px; 
+            display: flex; align-items: center; justify-content: center; border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .modal-title { font-size: 32px; margin-bottom: 20px; color: var(--dark); font-family: 'Space Grotesk', sans-serif; letter-spacing: -1px; }
+        .modal-desc { font-size: 16px; color: #444; line-height: 1.8; text-align: justify; font-weight: 400; }
+        .modal-desc ul { list-style: none; margin-top: 20px; margin-bottom: 20px; }
+        .modal-desc li { margin-bottom: 10px; color: #333; position: relative; padding-left: 20px; }
+        .modal-desc li::before { content: '•'; color: var(--primary); font-size: 20px; position: absolute; left: 0; top: -5px; }
+        .modal-desc h4 { font-size: 18px; margin-top: 25px; margin-bottom: 12px; color: var(--dark); border-left: 3px solid var(--primary); padding-left: 15px; }
+
+        /* --- CLIENTS SECTION & LOAD MORE BUTTON --- */
+        .clients-section { background-color: var(--primary); padding: 80px 5%; color: var(--dark); text-align: center; }
+        .clients-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px; align-items: center; justify-items: center; margin-top: 40px; }
+        .client-logo { font-size: 26px; font-weight: 900; opacity: 0.7; transition: 0.3s; display: flex; align-items: center; gap: 10px; cursor: pointer; letter-spacing: 1px; }
+        .client-logo:hover { opacity: 1; transform: scale(1.1); }
+        
+        .hidden-client { display: none; }
+        
+        .clients-btn-box { margin-top: 50px; }
+        .btn-dark-outline {
+            background: transparent; border: 2px solid var(--dark);
+            color: var(--dark); padding: 14px 35px; font-weight: 800;
+            font-size: 13px; letter-spacing: 1px; cursor: pointer;
+            transition: 0.3s; display: inline-block;
+        }
+        .btn-dark-outline:hover { background: var(--dark); color: var(--primary); }
+
+        /* --- FAQ --- */
+        .faq-section { padding: 120px 5%; background: var(--dark); color: var(--white); }
+        .accordion { max-width: 900px; margin: 0 auto; border-top: 1px solid #333; }
+        .faq-item { border-bottom: 1px solid #333; }
+        .faq-header { padding: 25px 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
+        .faq-header:hover { background: #1a1a1a; padding-left: 20px; }
+        .faq-header h4 { font-size: 18px; font-weight: 500; margin: 0; text-transform: none; font-family: 'Montserrat', sans-serif; }
+        .faq-body { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.5s ease; background: #161616; }
+        .faq-body p { padding: 20px 0; color: #aaa; font-size: 15px; font-weight: 300; }
+        .faq-item.active .faq-body { max-height: 200px; }
+        .faq-item.active .faq-header h4 { color: var(--primary); }
+        .faq-item.active .faq-icon { transform: rotate(180deg); color: var(--primary); }
+
+        /* --- CONTACT --- */
+        .contact { padding: 120px 5%; background: var(--light); display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .contact-text h2 span { border-bottom: 5px solid var(--primary); }
+        .contact-form { background: var(--white); padding: 50px; box-shadow: 0 20px 60px rgba(0,0,0,0.05); border-radius: 4px; }
+        .form-group { margin-bottom: 25px; }
+        .form-group input, .form-group textarea, .form-group select { 
+            width: 100%; padding: 18px; border: 1px solid #eee; background: #fafafa; 
+            font-family: inherit; font-size: 14px; outline: none; transition: 0.3s; font-weight: 500;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--dark); background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.05); }
+
+        /* --- FOOTER --- */
+        footer { background: #050505; color: var(--white); border-top: 4px solid var(--primary); }
+        .footer-top { padding: 100px 5% 60px; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 50px; }
+        .footer-logo { font-size: 30px; color: var(--white); margin-bottom: 25px; display: inline-block; letter-spacing: 1px; }
+        .footer-logo span { color: var(--primary); }
+        .footer-col p { color: #999; font-size: 14px; line-height: 1.8; margin-bottom: 30px; max-width: 300px; }
+        .social-links { display: flex; gap: 15px; }
+        .social-links a { 
+            width: 45px; height: 45px; background: rgba(255,255,255,0.05); 
+            display: flex; align-items: center; justify-content: center; 
+            border-radius: 50%; color: var(--white); transition: 0.4s; font-size: 18px; border: 1px solid transparent;
+        }
+        .social-links a:hover { background: transparent; color: var(--primary); border-color: var(--primary); transform: translateY(-5px); }
+        .footer-col h4 { color: var(--white); margin-bottom: 30px; font-size: 16px; letter-spacing: 2px; font-weight: 800; }
+        .footer-col ul li { margin-bottom: 15px; }
+        .footer-col ul li a { color: #888; font-size: 14px; transition: 0.3s; display: inline-block; }
+        .footer-col ul li a:hover { color: var(--primary); transform: translateX(5px); }
+        .contact-list li { display: flex; gap: 15px; margin-bottom: 20px; color: #aaa; font-size: 14px; align-items: flex-start; }
+        .contact-list i { color: var(--primary); margin-top: 5px; }
+        .footer-bottom { 
+            background: #000; padding: 25px 5%; border-top: 1px solid #1a1a1a; 
+            display: flex; justify-content: space-between; align-items: center; 
+            flex-wrap: wrap; gap: 20px;
+        }
+        .copyright { color: #555; font-size: 13px; font-weight: 500; }
+        .legal-links a { color: #555; font-size: 13px; margin-left: 25px; transition: 0.3s; font-weight: 500; }
+        .legal-links a:hover { color: var(--primary); }
+
+        @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 45px; }
+            .stats-section, .contact, .about-intro-grid, .leaders-grid, .work-grid, .blog-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .legal-links a { margin: 0 10px; }
+            .clients-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; } 
+            nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--dark); padding: 30px; flex-direction: column; text-align: center; }
+            nav.active { display: flex; }
+            .mobile-btn { display: block; }
+            .modal-content { width: 92%; padding: 30px; }
+            body { cursor: auto; }
+            a, button, .read-more, .blog-btn, .footer-col ul li a, .legal-links a, .work-card, .btn-dark-outline { cursor: pointer !important; }
+            .cursor { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cursor"></div>
+    <div class="scroll-progress"></div>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-cube"></i> Algorithm<span>Box</span>.
+        </div>
+        <div class="mobile-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work" style="color:var(--primary)">Our Work</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <p class="subtitle">PREMIUM DIGITAL AGENCY</p>
+            <h1>We <span class="typewriter"></span><br>Your Business Growth.</h1>
+            <p class="hero-desc">We blend creative algorithms with performance marketing (SEO, Meta Ads) to deliver super-rich experiences.</p>
+            <a href="#contact" class="btn-main">GET FREE AUDIT</a>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stat-box"><h3 class="counter" data-target="150">0</h3><p>Projects Delivered</p></div>
+        <div class="stat-box"><h3 class="counter" data-target="98">0</h3><p>% Retention Rate</p></div>
+        <div class="stat-box"><h3 class="counter" data-target="12">0</h3><p>Years Experience</p></div>
+        <div class="stat-box"><h3 class="counter" data-target="500">0</h3><p>% ROI Generated</p></div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-intro-grid">
+            <div class="about-text" data-aos="fade-right">
+                <h4>WHO WE ARE</h4>
+                <h2>We Live and Breathe <span style="color:var(--primary)">Digital</span>.</h2>
+                <p>The Internet is our home. We are a buzzing digital media agency based out of New Delhi, India. From marketing events like <strong>Auto Expo</strong> to creating incredible ROAS for ecommerce brands, our team loves to be creative and strategic.</p>
+                <a href="#contact" class="btn-main">WORK WITH US</a>
+            </div>
+            <div class="about-img" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="AlgorithmBox Team" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="section-title">
+            <h2>Our Algorithms</h2>
+            <p>Full-Stack Digital Solutions tailored for growth.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fas fa-chess-knight"></i></div>
+                <h3>Digital Strategy & Planning</h3>
+                <p>We leverage our years of experience to create the correct strategy and plans for your business...</p>
+                <div class="read-more" onclick="openModal('strategy')">Read More <i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                <h3>Creative & Web Graphics</h3>
+                <p>Creativity is a way of life at AlgorithmBox. When we create something – a website, an app, emailer...</p>
+                <div class="read-more" onclick="openModal('creative')">Read More <i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon"><i class="fas fa-share-alt"></i></div>
+                <h3>Social Media Marketing</h3>
+                <p>Social is in our name, literally! Social Media is key to our overall strategy...</p>
+                <div class="read-more" onclick="openModal('social')">Read More <i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="service-icon"><i class="fas fa-video"></i></div>
+                <h3>Video & Content Marketing</h3>
+                <p>Video has become the most popular content format. Google algorithm rewards pages with features...</p>
+                <div class="read-more" onclick="openModal('video')">Read More <i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Web Design & Development</h3>
+                <p>We stay ahead of the technological and UI trends. We focus on breaking down a user journey...</p>
+                <div class="read-more" onclick="openModal('web')">Read More <i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="service-icon"><i class="fas fa-search"></i></div>
+                <h3>Search Engine Optimization</h3>
+                <p>Our approach to SEO and SEM is simple and transparent. We audit your assets and assess...</p>
+                <div class="read-more" onclick="openModal('seo')">Read More <i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon"><i class="fas fa-envelope-open-text"></i></div>
+                <h3>Email Marketing</h3>
+                <p>We can build effective email marketing campaigns and streamline the delivery process...</p>
+                <div class="read-more" onclick="openModal('email')">Read More <i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                <h3>Web Analytics</h3>
+                <p>Data driven marketing is most effective. Understanding analytics data is key for any business...</p>
+                <div class="read-more" onclick="openModal('analytics')">Read More <i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                <h3>Media Planning & Buying</h3>
+                <p>We are connected with a network of media partners who help us offer a fully integrated...</p>
+                <div class="read-more" onclick="openModal('media')">Read More <i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="450">
+                <div class="service-icon"><i class="fab fa-shopify"></i></div>
+                <h3>Shopify Development</h3>
+                <p>Looking for a Shopify website development company? You’ve landed on just the right page!...</p>
+                <div class="read-more" onclick="openModal('shopify')">Read More <i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work-section">
+        <div class="section-title">
+            <h2>Featured Work</h2>
+            <p>Real results driven by data and creativity.</p>
+        </div>
+        <div class="work-grid">
+            <div class="work-card" data-aos="fade-up" onclick="openWorkModal('work1')">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="work-img" alt="Ecommerce Strategy" loading="lazy">
+                <div class="work-overlay"><span class="work-cat">E-COMMERCE</span><h3 class="work-title">Scale Up: 400% ROAS for Fashion Brand</h3></div>
+                <div class="work-btn"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="work-card" data-aos="fade-up" data-aos-delay="100" onclick="openWorkModal('work2')">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059ee971?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="work-img" alt="Real Estate Marketing" loading="lazy">
+                <div class="work-overlay"><span class="work-cat">REAL ESTATE</span><h3 class="work-title">Luxury Housing: High Ticket Lead Gen</h3></div>
+                <div class="work-btn"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="work-card" data-aos="fade-up" data-aos-delay="200" onclick="openWorkModal('work3')">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="work-img" alt="Tech Startup Rebrand" loading="lazy">
+                <div class="work-overlay"><span class="work-cat">TECH STARTUP</span><h3 class="work-title">FinTech App: Rebranding & UI/UX</h3></div>
+                <div class="work-btn"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="work-card" data-aos="fade-up" onclick="openWorkModal('work4')">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="work-img" alt="SEO Analysis" loading="lazy">
+                <div class="work-overlay"><span class="work-cat">SEO GROWTH</span><h3 class="work-title">Auto Portal: 2M Monthly Organic Traffic</h3></div>
+                <div class="work-btn"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="work-card" data-aos="fade-up" data-aos-delay="100" onclick="openWorkModal('work5')">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="work-img" alt="Corporate Website" loading="lazy">
+                <div class="work-overlay"><span class="work-cat">WEB DEV</span><h3 class="work-title">Corporate: Static Site for Logistics Firm</h3></div>
+                <div class="work-btn"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="work-card" data-aos="fade-up" data-aos-delay="200" onclick="openWorkModal('work6')">
+                <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="work-img" alt="Social Media Campaign" loading="lazy">
+                <div class="work-overlay"><span class="work-cat">SOCIAL MEDIA</span><h3 class="work-title">FMCG: Viral Influencer Campaign</h3></div>
+                <div class="work-btn"><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE POPUP MODAL (GLASSMORPHISM) -->
+    <div class="modal-overlay" id="contentModal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal(null)">&times;</span>
+            <div class="modal-header-icon" id="modalIcon"></div>
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <div class="modal-desc" id="modalDesc"></div>
+        </div>
+    </div>
+
+    <!-- --- UPDATED CLIENTS SECTION (WITH LOAD MORE) --- -->
+    <section id="clients" class="clients-section">
+        <div data-aos="fade-up">
+            <h2>Our Clients</h2>
+            <p>Trusted by industry leaders and ambitious startups.</p>
+        </div>
+        <div class="clients-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Initial 4 Clients -->
+            <div class="client-logo"><i class="fab fa-aws"></i> AMAZON</div>
+            <div class="client-logo"><i class="fab fa-google"></i> GOOGLE</div>
+            <div class="client-logo"><i class="fas fa-building"></i> CBRE</div>
+            <div class="client-logo"><i class="fas fa-car-side"></i> FORD</div>
+            
+            <!-- Hidden 4 Clients -->
+            <div class="client-logo hidden-client"><i class="fab fa-microsoft"></i> MICROSOFT</div>
+            <div class="client-logo hidden-client"><i class="fas fa-video"></i> NETFLIX</div>
+            <div class="client-logo hidden-client"><i class="fas fa-bolt"></i> TESLA</div>
+            <div class="client-logo hidden-client"><i class="fab fa-adobe"></i> ADOBE</div>
+        </div>
+        <div class="clients-btn-box" data-aos="fade-up">
+            <button id="loadClientsBtn" class="btn-dark-outline" onclick="loadMoreClients()">VIEW ALL CLIENTS</button>
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <div class="section-title">
+            <h2>SEO & Growth Insights</h2>
+            <p>Master the algorithm with our expert guides.</p>
+        </div>
+        <div class="blog-grid">
+            <article class="blog-card" data-aos="fade-up">
+                <div class="blog-img-box">
+                    <span class="category-tag">SEO</span>
+                    <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="SEO Strategy" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">Dec 10, 2025 • Soumya S.</div>
+                    <h3>Google Core Update 2025: Survival Guide</h3>
+                    <p>The latest algorithm change focuses heavily on 'Helpful Content' and EEAT scores.</p>
+                    <div class="blog-btn" onclick="openBlogModal('blog1')">Read Article</div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-img-box">
+                    <span class="category-tag">AI Tech</span>
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="AI Marketing" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">Dec 08, 2025 • Tech Team</div>
+                    <h3>AI in Digital Marketing: Friend or Foe?</h3>
+                    <p>How agencies are using ChatGPT and Midjourney to scale content without losing the human touch.</p>
+                    <div class="blog-btn" onclick="openBlogModal('blog2')">Read Article</div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-img-box">
+                    <span class="category-tag">Local SEO</span>
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Local SEO" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">Dec 05, 2025 • Shubhendu J.</div>
+                    <h3>Local SEO: Dominating "Near Me" Searches</h3>
+                    <p>Google My Business strategies to rank #1 in the local pack for small businesses and clinics.</p>
+                    <div class="blog-btn" onclick="openBlogModal('blog3')">Read Article</div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-aos="fade-up">
+                <div class="blog-img-box">
+                    <span class="category-tag">Ads</span>
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Meta Ads">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">Nov 28, 2025 • Ads Team</div>
+                    <h3>Why ROAS is Dropping for E-commerce?</h3>
+                    <p>Is your Facebook Ad cost going up? We analyze the saturation of audience segments.</p>
+                    <div class="blog-btn" onclick="openBlogModal('blog4')">Read Article</div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-img-box">
+                    <span class="category-tag">Design</span>
+                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Web Design">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">Nov 20, 2025 • Design Lead</div>
+                    <h3>Web Design Trends: Bento Grids & Minimalism</h3>
+                    <p>Predicting the UI/UX trends of 2026. Why static HTML sites are making a comeback for speed.</p>
+                    <div class="blog-btn" onclick="openBlogModal('blog5')">Read Article</div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-img-box">
+                    <span class="category-tag">Voice Search</span>
+                    <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Voice Search">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">Nov 15, 2025 • SEO Team</div>
+                    <h3>Optimizing for Voice Search (Alexa/Siri)</h3>
+                    <p>50% of searches are now voice-based. Learn how to structure your content for featured snippets.</p>
+                    <div class="blog-btn" onclick="openBlogModal('blog6')">Read Article</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="section-title">
+            <h2 style="color:white">Frequent Questions</h2>
+        </div>
+        <div class="accordion">
+            <div class="faq-item">
+                <div class="faq-header"><h4>Do you work with startups?</h4><i class="fas fa-chevron-down faq-icon"></i></div>
+                <div class="faq-body"><p>Yes, we have special packages for startups.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header"><h4>How much do you charge for Meta Ads?</h4><i class="fas fa-chevron-down faq-icon"></i></div>
+                <div class="faq-body"><p>We work on a Token + Batch Success Fee model.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header"><h4>Do you build Static Websites?</h4><i class="fas fa-chevron-down faq-icon"></i></div>
+                <div class="faq-body"><p>Absolutely. We prefer Static HTML sites for speed and security.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-text">
+            <h2>Let's Build <br><span>Something Great.</span></h2>
+            <p>Ready to scale? Fill out the form and our strategists will contact you within 24 hours.</p>
+            <br>
+            <p><i class="fas fa-phone" style="color:var(--primary)"></i> +91 977380282</p>
+            <p><i class="fas fa-envelope" style="color:var(--primary)"></i> hello@algorithmbox.com</p>
+        </div>
+        <div class="contact-form">
+    <!-- Action me apna Formspree link lagana mat bhulna -->
+    <form action="https://formspree.io/f/mvgeykzb" method="POST">
+        
+        <!-- Name Field -->
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+
+        <!-- Phone Number Field (NEW ADDED) -->
+        <div class="form-group">
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+
+        <!-- Service Selection -->
+        <div class="form-group">
+            <select name="service" required>
+                <option value="" disabled selected>Interested Service?</option>
+                <option value="Web Development">Web Development</option>
+                <option value="SEO Services">SEO Services</option>
+                <option value="Performance Marketing">Performance Marketing</option>
+            </select>
+        </div>
+
+        <!-- Message Field -->
+        <div class="form-group">
+            <textarea name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-main" style="width:100%">SEND MESSAGE</button>
+    </form>
+</div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h2 class="footer-logo">Algorithm<span>Box</span>.</h2>
+                    <p>"Looking for the best Digital Marketing Agency in New Delhi? We are a full-service creative agency dedicated to elevating brands. By blending data-driven marketing strategies with exceptional creative output, we generate rich digital experiences that boost ROI. We live by our motto – 'We create super-rich experiences online!'"</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#work">Our Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- FULL FOOTER SERVICES LIST -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="javascript:void(0)" onclick="openModal('strategy')">Digital Strategy</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('creative')">Creative Graphics</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('social')">Social Media</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('video')">Video Marketing</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('web')">Web Development</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('seo')">SEO Services</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('email')">Email Marketing</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('analytics')">Web Analytics</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('media')">Media Buying</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('shopify')">Shopify Experts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get in Touch</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Connaught Place, New Delhi</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> hello@algorithmbox.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">© 2025 AlgorithmBox. All Rights Reserved.</div>
+            <div class="legal-links">
+                <a href="javascript:void(0)" class="legal-link" onclick="openLegalModal('privacy')">Privacy Policy</a>
+                <a href="javascript:void(0)" class="legal-link" onclick="openLegalModal('terms')">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        /* --- CURSOR LOGIC --- */
+        const cursor = document.querySelector('.cursor');
+        if (window.matchMedia("(hover: hover)").matches) {
+            document.addEventListener('mousemove', e => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            const hoverTargets = document.querySelectorAll('a, button, input, textarea, select, .service-card, .blog-card, .work-card, .read-more, .modal-close, .blog-btn, .legal-link, .footer-col a, .btn-dark-outline');
+            hoverTargets.forEach(item => {
+                item.addEventListener('mouseover', () => cursor.classList.add('hovered'));
+                item.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+            });
+        }
+
+        /* --- CLIENTS LOAD MORE LOGIC --- */
+        function loadMoreClients() {
+            const hiddenClients = document.querySelectorAll('.hidden-client');
+            const btn = document.getElementById('loadClientsBtn');
+            hiddenClients.forEach(client => {
+                client.style.display = 'flex'; // Reveals the hidden clients
+                client.style.animation = 'fadeIn 0.5s ease forwards';
+            });
+            btn.style.display = 'none'; // Hides the button after loading
+        }
+
+        /* --- FULL DATA SOURCES RESTORED --- */
+        const serviceDetails = {
+            strategy: {
+                title: "Digital Strategy & Planning",
+                icon: '<i class="fas fa-chess-knight"></i>',
+                content: `<p>We leverage our years of experience to create the correct strategy and plans for your business which helps to grow your brand and revenue.</p><ul><li>Market Research & Analysis</li><li>Brand Positioning</li><li>Growth Hacking Roadmaps</li></ul>`
+            },
+            creative: {
+                title: "Creative & Web Graphics",
+                icon: '<i class="fas fa-paint-brush"></i>',
+                content: `<p>Creativity is a way of life at AlgorithmBox. When we create something – a website, an app, emailer, an infographic, a social media post or more – we ensure it tells a compelling story that resonates with your audience.</p><ul><li>UI/UX Design</li><li>Logo & Branding</li><li>Social Creatives</li></ul>`
+            },
+            social: {
+                title: "Social Media Marketing",
+                icon: '<i class="fas fa-share-alt"></i>',
+                content: `<p>Social is in our name, literally! Social Media is key to our overall strategy, and we use a variety of social strategies across different channels to build communities.</p><ul><li>Instagram & Facebook</li><li>LinkedIn B2B</li><li>Influencer Marketing</li></ul>`
+            },
+            video: {
+                title: "Video & Content Marketing",
+                icon: '<i class="fas fa-video"></i>',
+                content: `<p>Video has become the most popular content format. Google algorithm rewards pages with features such as social media integration and rich videos.</p><ul><li>Reels & Shorts</li><li>Corporate Explainers</li><li>Product Shoots</li></ul>`
+            },
+            web: {
+                title: "Web Design & Development",
+                icon: '<i class="fas fa-laptop-code"></i>',
+                content: `<p>We stay ahead of the technological and UI trends. We focus on breaking down a user journey, translating our design into the most efficient and clean code.</p><ul><li>Custom HTML5/CSS3</li><li>React.js & Next.js</li><li>WordPress Themes</li></ul>`
+            },
+            seo: {
+                title: "Search Engine Optimization",
+                icon: '<i class="fas fa-search"></i>',
+                content: `<p>Our approach to SEO and SEM is simple and transparent. We audit your assets and assess your SEO/SEM goals post which we share timeline expectations.</p><ul><li>Technical Audits</li><li>On-Page Optimization</li><li>Backlink Building</li></ul>`
+            },
+            email: {
+                title: "Email Marketing",
+                icon: '<i class="fas fa-envelope-open-text"></i>',
+                content: `<p>We can build effective email marketing campaigns and streamline the delivery process so that sending emailers is easy, secure and personalised.</p><ul><li>Drip Campaigns</li><li>Newsletter Design</li><li>List Management</li></ul>`
+            },
+            analytics: {
+                title: "Web Analytics",
+                icon: '<i class="fas fa-chart-pie"></i>',
+                content: `<p>Data driven marketing is most effective. Understanding analytics data is key for any business with a digital presence. Your analytics helps you understand how users interact with your brand.</p><ul><li>GA4 Setup</li><li>Tag Manager</li><li>Custom Reports</li></ul>`
+            },
+            media: {
+                title: "Media Planning & Buying",
+                icon: '<i class="fas fa-bullhorn"></i>',
+                content: `<p>We are connected with a network of media partners who help us offer a fully integrated communication solution. These media include websites, apps, and digital platforms.</p><ul><li>Programmatic Ads</li><li>Display & Native</li><li>OTT Advertising</li></ul>`
+            },
+            shopify: {
+                title: "Shopify Development",
+                icon: '<i class="fab fa-shopify"></i>',
+                content: `<p>Looking for a Shopify website development company? You’ve landed on just the right page! We build high-converting e-commerce stores customized to your brand needs.</p><ul><li>Custom Theme Dev</li><li>App Integration</li><li>Speed Optimization</li></ul>`
+            }
+        };
+
+        const blogDetails = {
+            blog1: {
+                title: "Google Core Update 2025: A Survival Guide for Brands",
+                icon: '<i class="fas fa-file-alt"></i>',
+                content: `
+                    <p>Google's latest Core Update has shaken up the SERPs (Search Engine Results Pages) yet again. The focus this time is heavily tilted towards <strong>E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness)</strong> and the "Helpful Content" system.</p>
+                    <h4>What Changed?</h4>
+                    <ul>
+                        <li><strong>Content Depth:</strong> Thin content that doesn't answer the user's query comprehensively is being de-ranked.</li>
+                        <li><strong>AI Content:</strong> Google isn't penalizing AI content, but it is penalizing <em>lazy</em> AI content. It needs human editing and fact-checking.</li>
+                    </ul>
+                `
+            },
+            blog2: {
+                title: "AI in Digital Marketing: Scaling without Losing Soul",
+                icon: '<i class="fas fa-robot"></i>',
+                content: `
+                    <p>Artificial Intelligence is no longer a buzzword; it's a utility. From ChatGPT writing ad copy to Midjourney creating visuals, agencies are scaling faster than ever. But there is a trap.</p>
+                    <h4>The "Generic" Trap</h4>
+                    <p>If everyone uses the same prompts, everyone sounds the same. The winners in 2025 will be brands that use AI for <strong>ideation and structure</strong>, but use humans for <strong>voice and emotion</strong>.</p>
+                `
+            },
+            blog3: {
+                title: "Local SEO: Dominating 'Near Me' Searches",
+                icon: '<i class="fas fa-map-marker-alt"></i>',
+                content: `
+                    <p>For small businesses, clinics, and restaurants, Local SEO is the lifeline. 46% of all Google searches have local intent.</p>
+                    <h4>The Map Pack Strategy</h4>
+                    <ul>
+                        <li><strong>NAP Consistency:</strong> Ensure Name, Address, and Phone number are identical across Google, Facebook, and Yelp.</li>
+                        <li><strong>Reviews matter:</strong> Reply to every review (positive or negative) within 24 hours.</li>
+                    </ul>
+                `
+            },
+            blog4: {
+                title: "Why ROAS is Dropping for E-commerce?",
+                icon: '<i class="fas fa-chart-line"></i>',
+                content: `
+                    <p>Many dropshippers and D2C brands are seeing a decline in Return on Ad Spend (ROAS) on Meta (Facebook/Instagram). Why?</p>
+                    <p><strong>1. Saturation:</strong> Ad costs (CPM) have risen by 20% YoY.</p>
+                    <p><strong>2. Tracking Issues:</strong> Post-iOS14, tracking is less accurate.</p>
+                `
+            },
+            blog5: {
+                title: "Web Design Trends 2026: Bento Grids & Minimalism",
+                icon: '<i class="fas fa-pencil-ruler"></i>',
+                content: `
+                    <p>Web design is moving away from complex animations that slow down sites, towards <strong>"Bento Grids"</strong> (like Apple's promotional material) and brutalist minimalism.</p>
+                `
+            },
+            blog6: {
+                title: "Optimizing for Voice Search (Alexa/Siri)",
+                icon: '<i class="fas fa-microphone"></i>',
+                content: `
+                    <p>With smart speakers in millions of homes, voice search optimization is crucial. People don't type "Italian restaurant", they ask "Where is the best pasta place near me?".</p>
+                `
+            }
+        };
+
+        const workDetails = {
+            work1: {
+                title: "Fashion Brand Scale Up",
+                icon: '<i class="fas fa-tshirt"></i>',
+                content: `
+                    <h4>The Challenge</h4>
+                    <p>A new D2C clothing brand was struggling with high CAC (Customer Acquisition Cost) on Facebook Ads.</p>
+                    <h4>The Solution</h4>
+                    <p>We implemented a CBO (Campaign Budget Optimization) strategy and improved creatives using UGC (User Generated Content).</p>
+                    <h4>The Result</h4>
+                    <ul>
+                        <li>400% ROAS within 3 months.</li>
+                        <li>Reduced CAC by 35%.</li>
+                    </ul>
+                `
+            },
+            work2: {
+                title: "Luxury Real Estate Leads",
+                icon: '<i class="fas fa-building"></i>',
+                content: `
+                    <h4>The Challenge</h4>
+                    <p>Generating qualified leads for flats worth ₹5Cr+ in Gurgaon.</p>
+                    <h4>The Solution</h4>
+                    <p>Targeted High Net-worth Individuals (HNIs) on LinkedIn and Google Search for specific keywords.</p>
+                    <h4>The Result</h4>
+                    <ul>
+                        <li>50 Qualified Site Visits.</li>
+                        <li>₹25Cr Revenue Generated.</li>
+                    </ul>
+                `
+            },
+            work3: {
+                title: "FinTech App Rebranding",
+                icon: '<i class="fas fa-mobile-alt"></i>',
+                content: `
+                    <h4>The Challenge</h4>
+                    <p>The app looked outdated and had a high uninstall rate.</p>
+                    <h4>The Solution</h4>
+                    <p>Complete UI/UX overhaul with a focus on minimalism and dark mode.</p>
+                    <h4>The Result</h4>
+                    <ul>
+                        <li>Retention increased by 40%.</li>
+                        <li>Featured on App Store.</li>
+                    </ul>
+                `
+            },
+            work4: { 
+                title: "Auto Portal SEO", 
+                icon: '<i class="fas fa-car"></i>', 
+                content: `
+                    <h4>The Challenge</h4>
+                    <p>The portal had great content but poor technical SEO, resulting in low organic traffic.</p>
+                    <h4>The Solution</h4>
+                    <p>Implemented Programmatic SEO for car specification pages and fixed Core Web Vitals.</p>
+                    <h4>The Result</h4>
+                    <ul>
+                        <li>Achieved 2M monthly organic traffic.</li>
+                        <li>Ranked #1 for 5000+ keywords.</li>
+                    </ul>
+                ` 
+            },
+            work5: { 
+                title: "Logistics Corporate Site", 
+                icon: '<i class="fas fa-truck"></i>', 
+                content: `
+                    <h4>The Challenge</h4>
+                    <p>The old WordPress site was slow (5s load time) and vulnerable to malware.</p>
+                    <h4>The Solution</h4>
+                    <p>Built a static HTML5 website with optimized assets and secure hosting.</p>
+                    <h4>The Result</h4>
+                    <ul>
+                        <li>99/100 Google PageSpeed Score.</li>
+                        <li>Zero downtime in 2 years.</li>
+                    </ul>
+                ` 
+            },
+            work6: { 
+                title: "FMCG Viral Campaign", 
+                icon: '<i class="fas fa-bullhorn"></i>', 
+                content: `
+                    <h4>The Challenge</h4>
+                    <p>Launching a new snack brand in a crowded market with a limited budget.</p>
+                    <h4>The Solution</h4>
+                    <p>Collaborated with 20 micro-influencers on Instagram Reels using a catchy jingle.</p>
+                    <h4>The Result</h4>
+                    <ul>
+                        <li>10 Million+ Organic Views.</li>
+                        <li>Stock sold out in 48 hours.</li>
+                    </ul>
+                ` 
+            }
+        };
+
+        const legalDetails = {
+            privacy: {
+                title: "Privacy Policy",
+                icon: '<i class="fas fa-user-shield"></i>',
+                content: `
+                    <h4>1. Information We Collect</h4>
+                    <p>We collect information you provide directly to us, such as when you fill out a contact form, subscribe to our newsletter, or communicate with us. This may include your Name, Email, and Phone Number.</p>
+                    <h4>2. How We Use Information</h4>
+                    <p>We use the information to respond to your inquiries, send you marketing communications (if opted in), and improve our website services.</p>
+                    <h4>3. Data Protection</h4>
+                    <p>We implement security measures to maintain the safety of your personal information. We do not sell or trade your data to outside parties.</p>
+                `
+            },
+            terms: {
+                title: "Terms of Service",
+                icon: '<i class="fas fa-gavel"></i>',
+                content: `
+                    <h4>1. Acceptance of Terms</h4>
+                    <p>By accessing this website, you agree to be bound by these Terms and Conditions of Use and all applicable laws.</p>
+                    <h4>2. Services</h4>
+                    <p>AlgorithmBox provides digital marketing services. All deliverables are subject to the specific contract signed with the client.</p>
+                    <h4>3. Intellectual Property</h4>
+                    <p>All content on this site (text, code, graphics) is the property of AlgorithmBox and protected by copyright laws.</p>
+                `
+            },
+            cookie: {
+                title: "Cookie Policy",
+                icon: '<i class="fas fa-cookie-bite"></i>',
+                content: `
+                    <h4>1. What Are Cookies?</h4>
+                    <p>Cookies are small text files stored on your device to help the website function better.</p>
+                    <h4>2. Types of Cookies We Use</h4>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> Necessary for the site to function.</li>
+                        <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with the site (e.g., Google Analytics).</li>
+                    </ul>
+                    <h4>3. Managing Cookies</h4>
+                    <p>You can choose to disable cookies through your browser settings, though some site features may not function properly.</p>
+                `
+            }
+        };
+
+        /* --- MODAL FUNCTIONS --- */
+        function fillAndShowModal(data) {
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalDesc').innerHTML = data.content;
+            document.getElementById('modalIcon').innerHTML = data.icon;
+            document.getElementById('contentModal').classList.add('active');
+            document.body.classList.add('modal-open');
+        }
+        function openModal(key) { if(serviceDetails[key]) fillAndShowModal(serviceDetails[key]); }
+        function openBlogModal(key) { if(blogDetails[key]) fillAndShowModal(blogDetails[key]); }
+        function openWorkModal(key) { if(workDetails[key]) fillAndShowModal(workDetails[key]); }
+        function openLegalModal(key) { if(legalDetails[key]) fillAndShowModal(legalDetails[key]); }
+        function closeModal(event) {
+            if (!event || event.target.id === 'contentModal' || event.target.classList.contains('modal-close')) {
+                document.getElementById('contentModal').classList.remove('active');
+                document.body.classList.remove('modal-open');
+            }
+        }
+
+        /* --- UI LOGIC --- */
+        const words = ["Scale", "Optimize", "Grow"];
+        let i = 0;
+        const span = document.querySelector('.typewriter');
+        function typeWriter() { if(span) { span.innerHTML = words[i]; i = (i + 1) % words.length; } }
+        setInterval(typeWriter, 2000); typeWriter();
+
+        const header = document.querySelector('header');
+        const progressBar = document.querySelector(".scroll-progress");
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) header.classList.add('sticky'); else header.classList.remove('sticky');
+            let scrolled = (document.body.scrollTop || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+            if(progressBar) progressBar.style.width = scrolled + "%";
+        });
+
+        const counters = document.querySelectorAll('.counter');
+        let counted = false;
+        const statsSection = document.querySelector('.stats-section');
+        window.addEventListener('scroll', () => {
+            if(statsSection && window.scrollY > statsSection.offsetTop - 500 && !counted) {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const inc = target / 200;
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        if(count < target) { counter.innerText = Math.ceil(count + inc); setTimeout(updateCount, 20); }
+                        else { counter.innerText = target + "+"; }
+                    }; updateCount();
+                });
+                counted = true;
+            }
+        });
+
+        document.querySelectorAll('.faq-header').forEach(acc => { acc.addEventListener('click', () => { acc.parentElement.classList.toggle('active'); }); });
+        const mobileBtn = document.querySelector('.mobile-btn');
+        const navMenu = document.querySelector('nav');
+        if(mobileBtn) { mobileBtn.addEventListener('click', () => navMenu.classList.toggle('active')); }
+        document.querySelectorAll('nav ul li a').forEach(link => { link.addEventListener('click', () => navMenu.classList.remove('active')); });
+    </script>
+</body>
+</html>
